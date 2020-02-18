@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.fragment_ranks.view.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -40,7 +42,27 @@ class Ranks : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ranks, container, false)
+        val view = inflater.inflate(R.layout.fragment_ranks, container, false)
+
+        val ranks = mutableListOf<Rank>()
+
+        ranks.add(stringToRank(view.context.resources.getString(R.string.highCardsDesc)))
+        ranks.add(stringToRank(view.context.resources.getString(R.string.pairDesc)))
+        ranks.add(stringToRank(view.context.resources.getString(R.string.twoPairDesc)))
+        ranks.add(stringToRank(view.context.resources.getString(R.string.threeKindDesc)))
+        ranks.add(stringToRank(view.context.resources.getString(R.string.straightDesc)))
+        ranks.add(stringToRank(view.context.resources.getString(R.string.flushDesc)))
+        ranks.add(stringToRank(view.context.resources.getString(R.string.fullHouseDesc)))
+        ranks.add(stringToRank(view.context.resources.getString(R.string.fourKindDesc)))
+        ranks.add(stringToRank(view.context.resources.getString(R.string.straightFlushDesc)))
+        ranks.add(stringToRank(view.context.resources.getString(R.string.royalFlushDesc)))
+
+        val ranksAdapter = RanksAdapter(ranks)
+
+        view.ranksList.layoutManager = LinearLayoutManager(view.context)
+        view.ranksList.adapter = ranksAdapter
+
+        return view
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -95,4 +117,8 @@ class Ranks : Fragment() {
                 }
             }
     }
+}
+
+fun stringToRank(input : String) : Rank{
+    return Rank(input.split(":")[0].trim(), input.split(":")[1].trim())
 }

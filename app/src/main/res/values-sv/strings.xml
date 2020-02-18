@@ -35,4 +35,19 @@
     <string name="welcome">Välkommen</string>
     <string name="cardsLeft">Kort kvar</string>
     <string name="newDeck">Ny kortlek</string>
+    <string name="highCard">Högt kort</string>
+    <string name="twoPair">Tvåpar</string>
+    <string name="fullHouse">Kåk</string>
+    <string name="pokerHandRanks">Pokerhandsvärden</string>
+    <string name="pokerHandLowToHigh">Pokerhänder - lägsta till högsta valör</string>
+    <string name="flushDesc">Färg:Fem kort av samma färg som inte bildar en sekvens.</string>
+    <string name="fourKindDesc">Fyrtal:Fyra kort av samma valör.</string>
+    <string name="fullHouseDesc">Kåk:Både en triss och ett par i en och samma hand.</string>
+    <string name="highCardsDesc">Högt kort:En hand utan några kombinationer är värderad av det högsta kortet i handen.</string>
+    <string name="pairDesc">Par:Två kort av samma valör (nummer).</string>
+    <string name="royalFlushDesc">Royal flush: Den högst värderade färgstegen. Alltså ett Ess, en Kung, Dam, Knekt och 10  (Alla av samma färg).</string>
+    <string name="straightDesc">Stege:Fem kort i en sekvens där alla kort inte är av samma färg.</string>
+    <string name="straightFlushDesc">Färgstege:Fem kort i en sekvens där alla kort är av samma färg.</string>
+    <string name="threeKindDesc">Triss:Tre kort med samma valör.</string>
+    <string name="twoPairDesc">Tvåpar:Två uppsättningar av kort med samma valör (Två par på en hand).</string>
 </resources>

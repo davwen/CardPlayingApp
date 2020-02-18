@@ -54,7 +54,7 @@
             android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/possibilitiesBtn"
+            android:id="@+id/possibilitiesFragBtn"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,12 +70,24 @@
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/possibilitiesBtn"
+            android:layout_below="@id/possibilitiesFragBtn"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:layout_marginHorizontal="20dp"
             android:layout_marginVertical="10dp"
             android:text="@string/randomCard" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ranksFragBtn"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rCardFragBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:text="@string/pokerHandRanks" />
 
 
     </RelativeLayout>

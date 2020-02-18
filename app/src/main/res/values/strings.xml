@@ -31,14 +31,29 @@
     <string name="royalFlush">Royal Flush</string>
     <string name="seeHands">Possible hands</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="randomCard">Random card</string>
     <string name="possiEmptyListMsg">Add cards to be able to see possible poker hands.</string>
     <string name="pokerHands">Poker Hands</string>
     <string name="pickRandomCard">Pick Random Card</string>
-    <string name="welcomeMsg">Show the menu with all of the different tools by draging in the arrow at the bottom.</string>
+    <string name="welcomeMsg">Show the menu with all of the different tools by dragging in the arrow at the bottom.</string>
     <string name="welcome">Welcome</string>
     <string name="cardsLeft">Cards left</string>
     <string name="newDeck">New deck</string>
+    <string name="highCard">High card</string>
+    <string name="twoPair">Two pair</string>
+    <string name="fullHouse">Full house</string>
+    <string name="pokerHandRanks">Poker hand ranks</string>
+    <string name="pokerHandLowToHigh">Poker hands - lowest to highest rank (value)</string>
+
+    <string name="highCardsDesc">High cards:A hand with no combinations is valued by the highest ranked card in the hand.</string>
+    <string name="pairDesc">Pair:Two cards with the same rank (value).</string>
+    <string name="twoPairDesc">Two pair:Two sets of cards with the same rank (Two pairs in one hand).</string>
+    <string name="threeKindDesc">Three of a kind:Three cards with the same rank.</string>
+    <string name="straightDesc">Straight:Five cards in a sequence which are not of the same suit.</string>
+    <string name="flushDesc">Flush:Five cards of the same suit which are not in a sequence.</string>
+    <string name="fullHouseDesc">Full house:A hand with three of a kind combined with a pair.</string>
+    <string name="fourKindDesc">Four of a kind:Four cards with the same rank.</string>
+    <string name="straightFlushDesc">Straight flush:A five card sequence where all the cards have the same suit.</string>
+    <string name="royalFlushDesc">Royal flush:The highest ranked straight flush. In other words Ace, King, Queen, Jack and 10 all of the same suit.</string>
 </resources>

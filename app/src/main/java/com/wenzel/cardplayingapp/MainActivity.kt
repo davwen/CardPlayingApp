@@ -3,7 +3,6 @@ package com.wenzel.cardplayingapp
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.transition.Slide
-import android.util.Log
 import android.view.Gravity
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         changeFragment(defaultFragment, false)
 
-        possibilitiesBtn.setOnClickListener{
+        possibilitiesFragBtn.setOnClickListener{
 
             if(fragViewer.javaClass.simpleName != PossibilitiesFragment().javaClass.simpleName){
                 changeFragment(PossibilitiesFragment())
@@ -43,6 +42,15 @@ class MainActivity : AppCompatActivity() {
 
             if(fragViewer.javaClass.simpleName != RandomCard().javaClass.simpleName){
                 changeFragment(RandomCard())
+            }
+
+            slidingPanel.panelState = SlidingUpPanelLayout.PanelState.COLLAPSED
+        }
+
+        ranksFragBtn.setOnClickListener{
+
+            if(fragViewer.javaClass.simpleName != Ranks().javaClass.simpleName){
+                changeFragment(Ranks())
             }
 
             slidingPanel.panelState = SlidingUpPanelLayout.PanelState.COLLAPSED
