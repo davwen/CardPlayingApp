@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Card Playing</string>
+    <string name="app_name">Card Playing App</string>
     <string name="cancel">Cancel</string>
     <string name="result">Result</string>
     <string name="add_cards">Add cards</string>
