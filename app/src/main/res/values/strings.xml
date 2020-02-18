@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Card Playing App</string>
+    <string name="cancel">Cancel</string>
+    <string name="result">Result</string>
+    <string name="add_cards">Add cards</string>
+
+    <string name="add_card">Add card</string>
+
+    <string name="card">Card</string>
+    <string name="number">Number</string>
+    <string name="suit">Suit</string>
+    <string name="rank">Rank</string>
+
+    <string name="spades">Spades</string>
+    <string name="hearts">Hearts</string>
+    <string name="diamonds">Diamonds</string>
+    <string name="clubs">Clubs</string>
+
+    <string name="jack">Jack</string>
+    <string name="queen">Queen</string>
+    <string name="king">King</string>
+    <string name="ace">Ace</string>
+
+    <string name="notEnoughCardsMsg">You need to add at least two cards.</string>
+    <string name="pair">Pair</string>
+    <string name="threeKind">Three of a kind</string>
+    <string name="fourKind">Four of a kind</string>
+    <string name="straight">Straight</string>
+    <string name="flush">Flush</string>
+    <string name="straightFlush">Straight Flush</string>
+    <string name="royalFlush">Royal Flush</string>
+    <string name="seeHands">Possible hands</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="randomCard">Random card</string>
+    <string name="possiEmptyListMsg">Add cards to be able to see possible poker hands.</string>
+    <string name="pokerHands">Poker Hands</string>
+    <string name="pickRandomCard">Pick Random Card</string>
+    <string name="welcomeMsg">Show the menu with all of the different tools by draging in the arrow at the bottom.</string>
+    <string name="welcome">Welcome</string>
+    <string name="cardsLeft">Cards left</string>
+    <string name="newDeck">New deck</string>
+</resources>

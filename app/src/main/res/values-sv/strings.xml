@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kortspelsapp</string>
+    <string name="ace">Ess</string>
+    <string name="add_card">Lägg till kort</string>
+    <string name="add_cards">Lägg till kort</string>
+    <string name="cancel">Avbryt</string>
+    <string name="card">Kort</string>
+    <string name="clubs">Klöver</string>
+    <string name="diamonds">Ruter</string>
+    <string name="hearts">Hjärter</string>
+    <string name="jack">Knekt</string>
+    <string name="king">Kung</string>
+    <string name="notEnoughCardsMsg">Du måste lägga till minst två kort</string>
+    <string name="number">Nummer</string>
+    <string name="queen">Dam</string>
+    <string name="rank">Valör</string>
+    <string name="result">Resultat</string>
+    <string name="spades">Spader</string>
+    <string name="suit">Färg</string>
+    <string name="pair">Par</string>
+    <string name="threeKind">Triss</string>
+    <string name="fourKind">Fyrtal</string>
+    <string name="straight">Stege</string>
+    <string name="flush">Färg</string>
+    <string name="straightFlush">Färgstege</string>
+    <string name="royalFlush">Royal Flush</string>
+    <string name="seeHands">Tillgängliga händer</string>
+    <string name="hello_blank_fragment">Hej blankt fragment</string>
+    <string name="randomCard">Slumpat kort</string>
+    <string name="possiEmptyListMsg">Lägg till kort för att kunna se tillgängliga pokerhänder.</string>
+    <string name="pokerHands">Pokerhänder</string>
+    <string name="pickRandomCard">Slumpa kort</string>
+    <string name="welcomeMsg">Visa menyn med alla olika verktyg genom att dra pilen uppåt.</string>
+    <string name="welcome">Välkommen</string>
+    <string name="cardsLeft">Kort kvar</string>
+    <string name="newDeck">Ny kortlek</string>
+</resources>

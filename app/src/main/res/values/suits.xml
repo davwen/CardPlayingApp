@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="suits">
+        <item>club</item>
+        <item>diamond</item>
+        <item>heart</item>
+        <item>spade</item>
+    </string-array>
+
+    <string-array name="suitsAdapter">
+        <item>@string/clubs</item>
+        <item>@string/diamonds</item>
+        <item>@string/hearts</item>
+        <item>@string/spades</item>
+    </string-array>
+
+    //Those two lists needs to have all of their items in the same order.
+</resources>
