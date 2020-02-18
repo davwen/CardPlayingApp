@@ -2,14 +2,15 @@ package com.wenzel.cardplayingapp
 
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.transition.Slide
 import android.util.Log
+import android.view.Gravity
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import kotlinx.android.synthetic.main.activity_main.*
 
-
-//import kotlinx.android.synthetic.main.activity_main.toolbar
 
 const val HEART = "heart"
 const val SPADE = "spade"
@@ -27,41 +28,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
-        val fragment = defaultFragment
-        val transaction = supportFragmentManager.beginTransaction().apply {
-
-            replace(R.id.fragViewer, fragment)
-
-        }
-
-        transaction.commit()
+        changeFragment(defaultFragment, false)
 
         possibilitiesBtn.setOnClickListener{
 
-            val fragment = PossibilitiesFragment()
-            val transaction = supportFragmentManager.beginTransaction().apply {
-
-                replace(R.id.fragViewer, fragment)
-                addToBackStack(null)
+            if(fragViewer.javaClass.simpleName != PossibilitiesFragment().javaClass.simpleName){
+                changeFragment(PossibilitiesFragment())
             }
-
-            transaction.commit()
-
 
             slidingPanel.panelState = SlidingUpPanelLayout.PanelState.COLLAPSED
         }
 
         rCardFragBtn.setOnClickListener{
 
-            val fragment = RandomCard()
-            val transaction = supportFragmentManager.beginTransaction().apply {
-
-                replace(R.id.fragViewer, fragment)
-                addToBackStack(null)
+            if(fragViewer.javaClass.simpleName != RandomCard().javaClass.simpleName){
+                changeFragment(RandomCard())
             }
-
-            transaction.commit()
-
 
             slidingPanel.panelState = SlidingUpPanelLayout.PanelState.COLLAPSED
         }
@@ -69,7 +51,6 @@ class MainActivity : AppCompatActivity() {
         slidingPanel.addPanelSlideListener(object : SlidingUpPanelLayout.PanelSlideListener {
             override fun onPanelSlide(panel: View?, slideOffset: Float) {
                 dragUpArrow.rotation = slideOffset * 180f
-                Log.d("PanelLog", slideOffset.toString())
             }
 
             override fun onPanelStateChanged(panel: View?, previousState: SlidingUpPanelLayout.PanelState?, newState: SlidingUpPanelLayout.PanelState?) {
@@ -79,6 +60,23 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    }
+
+    private fun changeFragment(fragment: Fragment, addToStack : Boolean = true){
+
+        fragment.enterTransition = Slide(Gravity.END)
+        fragment.exitTransition = Slide(Gravity.START)
+
+        val transaction = supportFragmentManager.beginTransaction().apply {
+
+            replace(R.id.fragViewer, fragment)
+            if(addToStack){
+                addToBackStack(null)
+            }
+
+        }
+
+        transaction.commit()
     }
 
 
