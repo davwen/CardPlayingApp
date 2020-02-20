@@ -3,10 +3,7 @@ package com.wenzel.cardplayingapp
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.cominations_res_item.view.*
-import kotlinx.android.synthetic.main.fragment_ranks.view.*
 import kotlinx.android.synthetic.main.poker_hands_theory_item.view.*
 
 
@@ -26,9 +23,7 @@ class RanksAdapter(private val ranksList: List<Rank>) : RecyclerView.Adapter<Ran
         holder.itemView.descTxt.text = ranksList[pos].description
     }
 
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
-    }
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
 }
 
 class Rank(_name : String, _description : String){

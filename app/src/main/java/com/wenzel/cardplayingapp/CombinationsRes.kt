@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.thoughtworks.xstream.XStream
 import kotlinx.android.synthetic.main.activity_combinations_res.*
 
-class Combinations_res : AppCompatActivity() {
+class CombinationsRes : AppCompatActivity() {
 
     private val combos = mutableListOf<Combination>()
 
@@ -16,6 +16,7 @@ class Combinations_res : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_combinations_res)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+
 
         combos.addAll(XStream().fromXML(intent.getStringExtra(COMBOS_KEY)) as List<Combination>)
 

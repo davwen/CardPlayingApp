@@ -16,7 +16,7 @@ const val ROYAL_FLUSH_KEY = "royal_flush"
 class Combinations {
 
     fun getPairs(context: Context, cards : List<Card>) : Combination{
-        var output = mutableListOf<Card>()
+        val output = mutableListOf<Card>()
 
 
 
@@ -40,7 +40,7 @@ class Combinations {
     }
 
     fun getThreeKind(context: Context, cards : List<Card>) : Combination{
-        var output = mutableListOf<Card>()
+        val output = mutableListOf<Card>()
 
 
 
@@ -64,7 +64,7 @@ class Combinations {
     }
 
     fun getFourKind(context: Context, cards : List<Card>) : Combination{
-        var output = mutableListOf<Card>()
+        val output = mutableListOf<Card>()
 
 
 
@@ -88,7 +88,7 @@ class Combinations {
     }
 
     fun getStraight(context: Context, cards : List<Card>) : Combination{
-        var output = mutableListOf<Card>()
+        val output = mutableListOf<Card>()
 
         var timesOccurred = 0
 
@@ -124,13 +124,14 @@ class Combinations {
             timesOccurred = 1
         }
 
-        output = sequence
+        output.clear()
+        output.addAll(sequence)
 
         return Combination(output, context.resources.getString(R.string.straight), timesOccurred, STRAIGHT_KEY)
     }
 
     fun getFlush(context: Context, cards : List<Card>) : Combination{
-        var output = mutableListOf<Card>()
+        val output = mutableListOf<Card>()
 
         var timesOccurred = 0
 
@@ -179,7 +180,7 @@ class Combinations {
     }
 
     fun getStraightFlush(context: Context, cards : List<Card>) : Combination{
-        var output = mutableListOf<Card>()
+        val output = mutableListOf<Card>()
 
         var timesOccurred = 0
 
@@ -232,7 +233,7 @@ class Combinations {
     }
 
     fun getRoyalFlush(context: Context, cards : List<Card>) : Combination{
-        var output = mutableListOf<Card>()
+        val output = mutableListOf<Card>()
 
         var timesOccurred = 0
 

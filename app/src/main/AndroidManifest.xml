@@ -18,7 +18,7 @@
 
         </activity>
         <activity
-            android:name="com.wenzel.cardplayingapp.Combinations_res" />
+            android:name="com.wenzel.cardplayingapp.CombinationsRes" />
 
 
         <meta-data

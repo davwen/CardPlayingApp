@@ -2,12 +2,12 @@ package com.wenzel.cardplayingapp
 
 import android.content.Context
 import android.graphics.drawable.Drawable
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.fragment_random_card.*
 import kotlinx.android.synthetic.main.fragment_random_card.view.*
 import kotlin.random.Random
@@ -27,13 +27,13 @@ class RandomCard : Fragment() {
 
         val possibleNumbers = activity!!.resources.getStringArray(R.array.numbersAdapter)
 
-        val randomCard = deck[Random.nextInt(0, deck.count())]
+        var randomCard = deck[Random.nextInt(0, deck.count())]
         view.rCardTxt.text = possibleNumbers[randomCard.number - 2]
         view.rCardImg.setImageDrawable(suitToDrawable(randomCard.suit))
 
         view!!.rCardBtn.setOnClickListener{
             if(deck.isNotEmpty()){
-                val randomCard = deck[Random.nextInt(0, deck.count())]
+                randomCard = deck[Random.nextInt(0, deck.count())]
                 view.rCardTxt.text = possibleNumbers[randomCard.number - 2]
                 val suit = randomCard.suit
 
@@ -43,7 +43,7 @@ class RandomCard : Fragment() {
                 cardsLeftTxt.text = deck.count().toString() + " " + view.context.resources.getString(R.string.cardsLeft).decapitalize()
             }else{
                 view.rCardBtn.isEnabled = false
-                view.rCardBtn.backgroundTintList = view.context.resources.getColorStateList(R.color.disabledBtn)
+                view.rCardBtn.backgroundTintList = ContextCompat.getColorStateList(view.context, R.color.disabledBtn)
             }
 
         }
@@ -52,12 +52,12 @@ class RandomCard : Fragment() {
             deck = generateDeck(view.context)
             cardsLeftTxt.text = deck.count().toString() + " " + view.context.resources.getString(R.string.cardsLeft).decapitalize()
 
-            val randomCard = deck[Random.nextInt(0, deck.count())]
+            randomCard = deck[Random.nextInt(0, deck.count())]
             view.rCardTxt.text = possibleNumbers[randomCard.number - 2]
             val suit = randomCard.suit
 
             view.rCardBtn.isEnabled = true
-            view.rCardBtn.backgroundTintList = view.context.resources.getColorStateList(R.color.colorAccent)
+            view.rCardBtn.backgroundTintList = ContextCompat.getColorStateList(view.context, R.color.colorAccent)
 
             view.rCardImg.setImageDrawable(suitToDrawable(suit))
         }
@@ -77,8 +77,6 @@ class RandomCard : Fragment() {
             }
         }
 
-
-
         return output
     }
 
@@ -86,21 +84,26 @@ class RandomCard : Fragment() {
         var output : Drawable? = null
 
         if(input == HEART){
-            output = activity!!.resources.getDrawable(R.drawable.heart)
+            output = activity!!.getMyDrawable(R.drawable.heart)
         }
 
         if(input == DIAMOND){
-            output = activity!!.resources.getDrawable(R.drawable.diamond)
+            output = activity!!.getMyDrawable(R.drawable.diamond)
         }
 
         if(input == SPADE){
-            output = activity!!.resources.getDrawable(R.drawable.spade)
+            output = activity!!.getMyDrawable(R.drawable.spade)
         }
 
         if(input == CLUB){
-            output = activity!!.resources.getDrawable(R.drawable.club)
+            output = activity!!.getMyDrawable(R.drawable.club)
         }
 
         return output!!
+    }
+
+    private fun Context.getMyDrawable(id : Int) : Drawable?{
+
+        return  ContextCompat.getDrawable(this, id)
     }
 }

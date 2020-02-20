@@ -3,11 +3,8 @@ package com.wenzel.cardplayingapp
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
-import android.content.ContextWrapper
 import android.content.DialogInterface
 import android.content.Intent
-import android.graphics.drawable.Drawable
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -18,7 +15,6 @@ import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.thoughtworks.xstream.XStream
-import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.add_card_dialog.view.*
 import kotlinx.android.synthetic.main.fragment_possibilities.view.*
 
@@ -124,7 +120,7 @@ class PossibilitiesFragment : Fragment() {
 
                 combos.add(Combinations().getRoyalFlush(activity!!.applicationContext, addedCards))
 
-                val intent = Intent(activity, Combinations_res::class.java)
+                val intent = Intent(activity, CombinationsRes::class.java)
                 intent.putExtra(COMBOS_KEY, XStream().toXML(combos))
                 startActivity(intent)
             }else{
@@ -145,7 +141,6 @@ class PossibilitiesFragment : Fragment() {
         val layout = activity.layoutInflater.inflate(R.layout.add_card_dialog, null, false)
 
         builder.setView(layout)
-            // Add action buttons
             .setPositiveButton(R.string.add_card,
                 DialogInterface.OnClickListener { _, _ ->
 
