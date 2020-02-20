@@ -12,7 +12,7 @@
         android:layout_weight="1"
         android:fontFamily="@font/cabin"
         android:paddingStart="30dp"
-        android:paddingTop="30dp"
+        android:paddingTop="0dp"
         android:paddingEnd="30dp"
         android:paddingBottom="16dp"
         android:text="Title"
@@ -28,6 +28,7 @@
         android:fontFamily="sans-serif"
         android:paddingStart="30dp"
         android:paddingEnd="30dp"
+        android:paddingBottom="30dp"
         android:text="Description"
         android:textSize="18sp" />
 

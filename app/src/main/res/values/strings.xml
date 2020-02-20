@@ -44,7 +44,7 @@
     <string name="twoPair">Two pair</string>
     <string name="fullHouse">Full house</string>
     <string name="pokerHandRanks">Poker hand ranks</string>
-    <string name="pokerHandLowToHigh">Poker hands - lowest to highest rank (value)</string>
+    <string name="pokerHandsTitle">Traditional Hand Ranks</string>
 
     <string name="highCardsDesc">High cards:A hand with no combinations is valued by the highest ranked card in the hand.</string>
     <string name="pairDesc">Pair:Two cards with the same rank (value).</string>
@@ -56,4 +56,7 @@
     <string name="fourKindDesc">Four of a kind:Four cards with the same rank.</string>
     <string name="straightFlushDesc">Straight flush:A five card sequence where all the cards have the same suit.</string>
     <string name="royalFlushDesc">Royal flush:The highest ranked straight flush. In other words Ace, King, Queen, Jack and 10 all of the same suit.</string>
+    <string name="pokerCalcTitle">Poker hand calculator</string>
+    <string name="rCardTitle">Random card generator</string>
+    <string name="orderedLowToHigh">Ordered from the lowest to the highest value.</string>
 </resources>

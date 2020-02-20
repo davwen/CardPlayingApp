@@ -4,10 +4,12 @@ import android.content.Context
 import java.util.*
 
 const val PAIR_KEY = "pair"
+const val TWO_PAIR_KEY = "two_pair"
 const val THREE_KIND_KEY = "three_of_a_kind"
 const val FOUR_KIND_KEY = "four_of_a_kind"
 const val STRAIGHT_KEY = "straight"
 const val FLUSH_KEY = "flush"
+const val FULL_HOUSE_KEY = "full_house"
 const val STRAIGHT_FLUSH_KEY = "straight_flush"
 const val ROYAL_FLUSH_KEY = "royal_flush"
 
