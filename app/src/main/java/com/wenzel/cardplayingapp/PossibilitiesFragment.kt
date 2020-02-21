@@ -18,6 +18,8 @@ import com.thoughtworks.xstream.XStream
 import kotlinx.android.synthetic.main.add_card_dialog.view.*
 import kotlinx.android.synthetic.main.fragment_possibilities.view.*
 
+private const val maxCards = 5
+private const val minCards = 2
 
 class PossibilitiesFragment : Fragment() {
     private val addedCards = mutableListOf<Card>()
@@ -50,8 +52,8 @@ class PossibilitiesFragment : Fragment() {
                     view.emptyListMsg.visibility = View.VISIBLE
                 }
 
-                view.add_btn.isEnabled = addedCards.count() < 5
-                view.checkBtn.isEnabled = addedCards.count() >= 2
+                view.add_btn.isEnabled = addedCards.count() < maxCards
+                view.checkBtn.isEnabled = addedCards.count() >= minCards
 
 
                 super.onItemRangeInserted(positionStart, itemCount)
@@ -64,8 +66,8 @@ class PossibilitiesFragment : Fragment() {
                     view.emptyListMsg.visibility = View.VISIBLE
                 }
 
-                view.add_btn.isEnabled = addedCards.count() < 5
-                view.checkBtn.isEnabled = addedCards.count() >= 2
+                view.add_btn.isEnabled = addedCards.count() < maxCards
+                view.checkBtn.isEnabled = addedCards.count() >= minCards
 
                 super.onItemRangeRemoved(positionStart, itemCount)
             }
@@ -99,6 +101,8 @@ class PossibilitiesFragment : Fragment() {
                         combos.add(pairs)
                         combos.add(Combination(mutableListOf(), view.context.resources.getString(R.string.twoPair), 0, TWO_PAIR_KEY))
                     }
+
+                    combos.add(Combination(mutableListOf(), view.context.resources.getString(R.string.threeKind), 0, THREE_KIND_KEY))
                 }
 
 

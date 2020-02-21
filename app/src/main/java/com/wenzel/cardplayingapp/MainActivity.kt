@@ -2,6 +2,7 @@ package com.wenzel.cardplayingapp
 
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.transition.Fade
 import android.transition.Slide
 import android.view.Gravity
 import android.view.View
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
-        changeFragment(defaultFragment, false)
+        changeFragment(defaultFragment)
 
         possibilitiesFragBtn.setOnClickListener{
 
@@ -70,10 +71,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun changeFragment(fragment: Fragment, addToStack : Boolean = true){
+    private fun changeFragment(fragment: Fragment, addToStack : Boolean = false){
 
-        fragment.enterTransition = Slide(Gravity.END)
-        fragment.exitTransition = Slide(Gravity.START)
+        fragment.enterTransition = Fade(Fade.MODE_IN)
+        fragment.exitTransition = Fade(Fade.MODE_OUT)
 
         val transaction = supportFragmentManager.beginTransaction().apply {
 

@@ -22,7 +22,7 @@ class CombinationsRes : AppCompatActivity() {
 
         Log.d("ComboCount", combos[0].cards.count().toString())
 
-        val combosAdapter = Combinations_adapter(combos)
+        val combosAdapter = CombinationsAdapter(combos)
 
         comb_list.layoutManager = LinearLayoutManager(this)
         comb_list.adapter = combosAdapter

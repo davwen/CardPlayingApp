@@ -59,4 +59,6 @@
     <string name="pokerCalcTitle">Poker hand calculator</string>
     <string name="rCardTitle">Random card generator</string>
     <string name="orderedLowToHigh">Ordered from the lowest to the highest value.</string>
+    <string name="tools">Tools</string>
+    <string name="theory">Theory</string>
 </resources>

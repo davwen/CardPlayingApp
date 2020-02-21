@@ -53,4 +53,6 @@
     <string name="pokerCalcTitle">Pokerhandsräknare</string>
     <string name="rCardTitle">Slumpkortsgenerator</string>
     <string name="orderedLowToHigh">Ordnade från lägsta till högsta valör.</string>
+    <string name="tools">Verktyg</string>
+    <string name="theory">Teori</string>
 </resources>

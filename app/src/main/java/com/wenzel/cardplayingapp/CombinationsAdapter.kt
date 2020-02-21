@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.cominations_res_item.view.*
 
-class Combinations_adapter(private val combos: List<Combination>) : RecyclerView.Adapter<Combinations_adapter.ViewHolder>() {
+class CombinationsAdapter(private val combos: List<Combination>) : RecyclerView.Adapter<CombinationsAdapter.ViewHolder>() {
 
     override fun getItemCount(): Int {
         return combos.size
@@ -27,7 +27,5 @@ class Combinations_adapter(private val combos: List<Combination>) : RecyclerView
 
     }
 
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
-    }
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
 }

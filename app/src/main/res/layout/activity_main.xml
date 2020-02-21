@@ -39,7 +39,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="400dp"
         android:background="@drawable/rounded_rec">
 
 
@@ -47,20 +47,34 @@
             android:id="@+id/dragUpArrow"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginTop="20dp"
             android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/toolsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dragUpArrow"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/cabin"
+            android:text="@string/tools"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="16dp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/possibilitiesFragBtn"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/dragUpArrow"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
+            android:layout_below="@id/toolsTitle"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginHorizontal="20dp"
             android:layout_marginVertical="10dp"
             android:text="@string/pokerCalcTitle"
@@ -73,24 +87,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/possibilitiesFragBtn"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginHorizontal="20dp"
             android:layout_marginVertical="10dp"
             android:text="@string/rCardTitle"
             android:textAllCaps="false"
             android:textSize="16sp" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/theoryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rCardFragBtn"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/cabin"
+            android:text="@string/theory"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="16dp" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ranksFragBtn"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/rCardFragBtn"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
+            android:layout_below="@id/theoryTitle"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginHorizontal="20dp"
             android:layout_marginVertical="10dp"
+            android:layout_marginBottom="20dp"
             android:text="@string/pokerHandRanks"
             android:textAllCaps="false"
             android:textSize="16sp" />
