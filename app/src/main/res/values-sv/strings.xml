@@ -55,4 +55,13 @@
     <string name="orderedLowToHigh">Ordnade från lägsta till högsta valör.</string>
     <string name="tools">Verktyg</string>
     <string name="theory">Teori</string>
+    <string name="suitsTitle">Färger</string>
+    <string name="aceWithShort">A (Ess)</string>
+    <string name="kingWithShort">K (Kung)</string>
+    <string name="queenWithShort">Q (Dam)</string>
+    <string name="jackWithShort">J (Knekt)</string>
+    <string name="aceShort">A</string>
+    <string name="kingShort">K</string>
+    <string name="queenShort">Q</string>
+    <string name="jackShort">J</string>
 </resources>

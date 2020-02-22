@@ -7,7 +7,7 @@
     tools:context=".Ranks">
 
     <TextView
-        android:id="@+id/titleText"
+        android:id="@+id/ranksTheoryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/cabin"

@@ -25,7 +25,7 @@ class RandomCard : Fragment() {
         var deck = generateDeck(view.context)
         view.cardsLeftTxt.text = deck.count().toString() + " " + view.context.resources.getString(R.string.cardsLeft).decapitalize()
 
-        val possibleNumbers = activity!!.resources.getStringArray(R.array.numbersAdapter)
+        val possibleNumbers = activity!!.resources.getStringArray(R.array.numbersAdapterShort)
 
         var randomCard = deck[Random.nextInt(0, deck.count())]
         view.rCardTxt.text = possibleNumbers[randomCard.number - 2]

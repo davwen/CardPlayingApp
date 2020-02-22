@@ -67,16 +67,16 @@ fun convertNumberToName(context: Context, input : Int) : String{
 
     if(input > 10){
         if(input == 11){
-            output = context.resources.getString(R.string.jack)
+            output = context.resources.getString(R.string.jackShort)
         }
         if(input == 12){
-            output = context.resources.getString(R.string.queen)
+            output = context.resources.getString(R.string.queenShort)
         }
         if(input == 13){
-            output = context.resources.getString(R.string.king)
+            output = context.resources.getString(R.string.kingShort)
         }
         if(input == 14){
-            output = context.resources.getString(R.string.ace)
+            output = context.resources.getString(R.string.aceShort)
         }
     }else{
         output = input.toString()

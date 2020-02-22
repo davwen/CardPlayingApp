@@ -61,4 +61,13 @@
     <string name="orderedLowToHigh">Ordered from the lowest to the highest value.</string>
     <string name="tools">Tools</string>
     <string name="theory">Theory</string>
+    <string name="suitsTitle">Suits</string>
+    <string name="aceWithShort">A (Ace)</string>
+    <string name="kingWithShort">K (King)</string>
+    <string name="queenWithShort">Q (Queen)</string>
+    <string name="jackWithShort">J (Jack)</string>
+    <string name="aceShort">A</string>
+    <string name="kingShort">K</string>
+    <string name="queenShort">Q</string>
+    <string name="jackShort">J</string>
 </resources>

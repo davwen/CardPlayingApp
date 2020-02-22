@@ -10,10 +10,26 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
-        <item>@string/jack</item>
-        <item>@string/queen</item>
-        <item>@string/king</item>
-        <item>@string/ace</item>
+        <item>@string/jackWithShort</item>
+        <item>@string/queenWithShort</item>
+        <item>@string/kingWithShort</item>
+        <item>@string/aceWithShort</item>
+    </string-array>
+
+    <string-array name="numbersAdapterShort">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>@string/jackShort</item>
+        <item>@string/queenShort</item>
+        <item>@string/kingShort</item>
+        <item>@string/aceShort</item>
     </string-array>
 
     <integer-array name="numbers">
